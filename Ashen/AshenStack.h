@@ -1,13 +1,15 @@
 #pragma once
 #include<memory>
 #include<stdexcept>
-
+#include<array>
 template<typename T>
 class AshenStack {
 	size_t head = 0;
 	size_t length = 1;
 	T* items = new T[1];
 public:
+	AshenStack& operator=(AshenStack&) = delete;
+	AshenStack& operator=(AshenStack&&) = default;
 	T get_head() const;
 	void push(T);
 	T pop();
@@ -39,6 +41,8 @@ void AshenStack<T>::push(T val)
 template<typename T>
 T AshenStack<T>::pop()
 {
+	if (head == 0)
+		throw std::runtime_error("Stack Underflow");
 	if (head > 0 && head == length / 4)
 		resize(length / 2);
 	return items[head--];
