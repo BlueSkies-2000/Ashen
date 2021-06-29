@@ -48,5 +48,5 @@ T AshenStack<T>::pop()
 		throw std::runtime_error("Stack Underflow");
 	if (head > 0 && head == length / 4)
 		resize(length / 2);
-	return items[head--];
+	return items[--head];
 }
