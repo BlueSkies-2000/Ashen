@@ -6,8 +6,12 @@ template<typename T>
 class AshenStack {
 	size_t head = 0;
 	size_t length = 1;
-	T* items = new T[1];
+	std::unique_ptr<T[]> items;
 public:
+	AshenStack()
+	{
+		items = std::make_unique<T[]>(2);
+	}
 	AshenStack& operator=(AshenStack&) = delete;
 	AshenStack& operator=(AshenStack&&) = default;
 	T get_head() const;
@@ -19,13 +23,12 @@ private:
 template<typename T>
 void AshenStack<T>::resize(size_t new_size)
 {
-	T* temp = new T[new_size];
+	std::unique_ptr<T[]> temp = std::make_unique<T[]>(new_size);
 	for (int i = 0; i < length; i++)
 	{
 		temp[i] = items[i];
 	}
-	items = temp;
-	length = new_size;
+	items = std::move(temp);
 }
 template<typename T>
 T AshenStack<T>::get_head() const {
