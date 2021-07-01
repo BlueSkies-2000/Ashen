@@ -1,9 +1,10 @@
 #include<Ashen/AshenStack.h>
+#include<Ashen/AshenLinkedList.h>
 #include<iostream>
 using namespace std;
 int main(){
 	char ch = 'w';
-	AshenStack<int> stack;
+	AshenLinkedList<int> stack;
 	while (ch!='e')
 	{
 		cout << "Enter the options for AshenStack \n1.Push Value\n2.pop value\n";

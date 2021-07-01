@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AshenQueue.h" />
+    <ClInclude Include="AshenLinkedList.h" />
     <ClInclude Include="AshenStack.h" />
   </ItemGroup>
   <ItemGroup>

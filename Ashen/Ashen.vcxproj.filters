@@ -18,7 +18,7 @@
     <ClInclude Include="AshenStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AshenQueue.h">
+    <ClInclude Include="AshenLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
