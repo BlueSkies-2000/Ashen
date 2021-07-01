@@ -143,6 +143,7 @@
     <ClInclude Include="AshenLinkedList.h" />
     <ClInclude Include="AshenQueue.h" />
     <ClInclude Include="AshenStack.h" />
+    <ClInclude Include="BinarySearchTree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />

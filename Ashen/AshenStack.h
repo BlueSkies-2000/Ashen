@@ -1,7 +1,6 @@
 #pragma once
 #include<memory>
 #include<stdexcept>
-#include<array>
 template<typename T>
 class AshenStack {
 	size_t head = 0;
